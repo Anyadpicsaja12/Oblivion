@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Letöltés és telepítés
         run: |
+          sudo apt update && sudo apt install -y curl
           curl -sL https://raw.githubusercontent.com/OblivionUser/oblivion_web_installer/main/install.sh | bash
-          
