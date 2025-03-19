@@ -1,0 +1,15 @@
+name: Oblivion Web Install
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Letöltés és telepítés
+        run: |
+          curl -sL https://raw.githubusercontent.com/OblivionUser/oblivion_web_installer/main/install.sh | bash
+          
