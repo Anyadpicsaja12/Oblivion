@@ -1,4 +1,4 @@
-name: Test Workflow
+name: Debug Oblivion Install
 
 on:
   push:
@@ -6,8 +6,17 @@ on:
       - main
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Ellenőrzés
-        run: echo "Workflow sikeresen fut!"
+        run: echo "Workflow működik!"
+
+      - name: Operációs rendszer információk
+        run: uname -a
+
+      - name: Alapvető csomagok frissítése
+        run: sudo apt update && sudo apt install -y curl
+
+      - name: Curl teszt
+        run: curl --version
