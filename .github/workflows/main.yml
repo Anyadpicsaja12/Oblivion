@@ -20,3 +20,9 @@ jobs:
 
       - name: Curl teszt
         run: curl --version
+
+      - name: Telepítő script letöltése
+        run: curl -sL https://raw.githubusercontent.com/OblivionUser/oblivion_web_installer/main/install.sh -o install.sh
+
+      - name: Ellenőrizzük, hogy a fájl letöltődött-e
+        run: ls -lah install.sh
