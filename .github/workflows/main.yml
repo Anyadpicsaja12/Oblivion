@@ -1,4 +1,4 @@
-name: Oblivion Web Install
+name: Test Workflow
 
 on:
   push:
@@ -6,16 +6,8 @@ on:
       - main
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Telepítési környezet előkészítése
-        run: |
-          sudo apt update
-          sudo apt install -y curl
-
-      - name: Letöltés és telepítés
-        run: |
-          curl -sL https://raw.githubusercontent.com/OblivionUser/oblivion_web_installer/main/install.sh -o install.sh
-          chmod +x install.sh
-          ./install.sh
+      - name: Ellenőrzés
+        run: echo "Workflow sikeresen fut!"
