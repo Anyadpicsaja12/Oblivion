@@ -1,4 +1,4 @@
-name: Oblivion Web Install
+name: Debug Oblivion Install
 
 on:
   push:
@@ -26,6 +26,12 @@ jobs:
 
       - name: Ellenőrizzük, hogy a fájl letöltődött-e
         run: ls -lah install.sh
+
+      - name: Nézzük meg a fájl tartalmát
+        run: cat install.sh
+
+      - name: Ellenőrizzük a fájl futtathatóságát
+        run: file install.sh
 
       - name: Script végrehajtása
         run: |
